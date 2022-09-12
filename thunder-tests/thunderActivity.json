@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "24688555-d1bb-433b-9b7b-e7859cacc85a",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/ping",
+    "url": "localhost:3000/products/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-09-12T19:20:54.647Z",
+    "modified": "2022-09-12T23:02:23.460Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]
