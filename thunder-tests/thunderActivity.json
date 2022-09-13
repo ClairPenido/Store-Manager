@@ -8,9 +8,33 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-12T19:20:54.647Z",
-    "modified": "2022-09-12T23:02:23.460Z",
+    "modified": "2022-09-13T14:16:01.404Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "e5398216-f757-40eb-ac8f-87ceff2600ae",
+    "colId": "history",
+    "containerId": "",
+    "name": "localhost:3000/products",
+    "url": "localhost:3000/products",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-09-13T14:15:50.527Z",
+    "modified": "2022-09-13T15:23:35.546Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "form": []
+    },
     "tests": []
   }
 ]

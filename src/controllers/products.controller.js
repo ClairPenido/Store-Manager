@@ -6,15 +6,19 @@ const getAllProducts = async (req, res) => {
 };
 
 const getProductsByID = async (req, res) => {
-  const { id } = req.params.id;
-  console.log(id);
-  const teste = await productController.returnProductByID(id);
-  const productById = teste.find((p) => p.id === id);
-  return productById ? (res.status(200).json(productById))
+  const { id } = req.params;
+  const productbyID = await productController.returnProductByID(id);
+  return productbyID ? (res.status(200).json(productbyID))
     : (res.status(404).json({ message: 'Product not found' }));
+};
+
+const insertNewProject = async (req, res) => {
+  const insertProduct = await productController.returnInsertProduct(req.body);
+  return res.status(201).json(insertProduct);
 };
 
 module.exports = {
   getAllProducts,
   getProductsByID,
+  insertNewProject,
 };
