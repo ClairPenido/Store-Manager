@@ -20,7 +20,7 @@ describe('Teste da camada Model', () => {
 
   it('Listar um Produto de acordo com seu ID', async function () {
 
-    sinon.stub(connect, 'execute').resolves([ productByIdMock ]);
+    sinon.stub(connect, 'execute').resolves( [[productByIdMock]] );
     const result = await productModel.getProductsByID(3);
     expect(result).to.equal(productByIdMock);
 
@@ -28,8 +28,8 @@ describe('Teste da camada Model', () => {
 
   it('Criar um novo Produto', async function () {
 
-    sinon.stub(connect, 'execute').resolves({ insertId: 12 });
-    const result = await productModel.getInsertProduct(insertNameMock);
+    sinon.stub(connect, 'execute').resolves(insertNameIDMock);
+    const result = await productModel.getInsertProduct('Beyblade');
     expect(result).to.equal(insertNameIDMock);
 
   });

@@ -13,9 +13,9 @@ describe('Teste da Camada Service', () => {
 
   it('Listar Produtos pelo ID', async function () {
 
-    sinon.stub(productModel, 'getInsertProduct').resolves(productByIdMock);
-    const result = await productModel.getAllProducts();
-    expect(result).to.equal(allProductsMock);
+    sinon.stub(productModel, 'getProductsByID').resolves(productByIdMock);
+    const result = await productModel.getProductsByID(3);
+    expect(result).to.equal(productByIdMock);
 
   });
 });

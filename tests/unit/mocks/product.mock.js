@@ -13,19 +13,19 @@ const allProductsMock = [
   }
 ];
 
-const productByIdMock = {
+const productByIdMock = [{
   "id": 3,
   "name": "Escudo do Capitão América"
-}
+}]
 
-const insertNameMock = {
+const insertNameMock = [{
   "name": "Beyblade"
-};
+}];
 
-const insertNameIDMock = {
+const insertNameIDMock = [{
   "id": 12,
   "name": "Beyblade"
-};
+}];
 
 
 module.exports = {

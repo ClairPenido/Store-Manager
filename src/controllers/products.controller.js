@@ -13,6 +13,7 @@ const getProductsByID = async (req, res) => {
 };
 
 const insertNewProject = async (req, res) => {
+  console.log('ola');
   const insertProduct = await productController.returnInsertProduct(req.body);
   return res.status(201).json(insertProduct);
 };
