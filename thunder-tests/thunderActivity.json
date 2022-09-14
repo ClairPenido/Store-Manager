@@ -4,11 +4,11 @@
     "colId": "history",
     "containerId": "",
     "name": "localhost:3000/ping",
-    "url": "localhost:3000/products/1",
+    "url": "localhost:3000/products",
     "method": "GET",
     "sortNum": 0,
     "created": "2022-09-12T19:20:54.647Z",
-    "modified": "2022-09-13T14:16:01.404Z",
+    "modified": "2022-09-14T20:25:07.460Z",
     "headers": [],
     "params": [],
     "body": {
@@ -27,12 +27,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2022-09-13T14:15:50.527Z",
-    "modified": "2022-09-13T15:23:35.546Z",
+    "modified": "2022-09-14T21:25:05.245Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "raw": "{\n  \"name\": \"\"\n}",
       "form": []
     },
     "tests": []

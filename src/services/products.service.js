@@ -4,7 +4,7 @@ const returnAllProducts = async () => productModel.getAllProducts();
 
 const returnProductByID = async (id) => productModel.getProductsByID(id);
 
-const returnInsertProduct = async (productName) => productModel.insertProduct(productName);
+const returnInsertProduct = async (productName) => productModel.getInsertProduct(productName);
 
 module.exports = {
   returnAllProducts,
