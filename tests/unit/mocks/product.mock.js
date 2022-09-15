@@ -18,9 +18,9 @@ const productByIdMock = [{
   "name": "Escudo do Capitão América"
 }]
 
-const insertNameMock = [{
+const insertNameMock = {
   "name": "Beyblade"
-}];
+};
 
 const insertNameIDMock = [{
   "id": 12,

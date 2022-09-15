@@ -14,8 +14,9 @@ const getProductsByID = async (id) => {
 const getInsertProduct = async (productName) => {
   const [insertProduct] = await connection
     .execute('INSERT INTO StoreManager.products (name) VALUES(?);', [productName]);
+  console.log('aqui', productName);
   const newProduct = { id: insertProduct.insertId, name: productName.name };
-  // console.log(newProduct);
+  console.log(newProduct);
   return newProduct;
 };
 

@@ -28,9 +28,9 @@ describe('Teste da camada Model', () => {
 
   it('Criar um novo Produto', async function () {
 
-    sinon.stub(connect, 'execute').resolves(insertNameIDMock);
-    const result = await productModel.getInsertProduct('Beyblade');
-    expect(result).to.equal(insertNameIDMock);
+    sinon.stub(connect, 'execute').resolves([{ insertId: 12 }]);
+    const result = await productModel.getInsertProduct(insertNameMock);
+    expect(result).to.deep.equal(insertNameIDMock[0]);
 
   });
 });
