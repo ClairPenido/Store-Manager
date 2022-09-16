@@ -3,11 +3,19 @@ const chai = require('chai');
 const { expect } = require('chai');
 
 const productModel = require('../../../src/models/products.model');
-const { productByIdMock } = require('../mocks/product.mock');
+const { allProductsMock, productByIdMock } = require('../mocks/product.mock');
 
 describe('Teste da Camada Service', () => {
   afterEach(function () {
     sinon.restore();
+  });
+
+  it('Listar todos os Produtos', async function () { //tive a percepção que fazer esse teste não aumentou em nada
+
+    sinon.stub(productModel, 'getAllProducts').resolves(allProductsMock);
+    const result = await productModel.getAllProducts();
+    expect(result).to.deep.equal(allProductsMock);
+
   });
 
   it('Listar Produtos pelo ID, se possuir produto com esse ID', async function () {

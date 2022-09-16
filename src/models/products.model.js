@@ -20,10 +20,17 @@ const getInsertProduct = async (productName) => {
   return newProduct;
 };
 
-const updateProduct = async (name, id) => {
-  const attName = await connection
-    .execute('UPDATE StoreManager.products SET name = ? WHERE id = ?;', [name, id]);
-  return attName;
+const updateProduct = async (product, id) => {
+  const productToUpdate = await connection
+    .execute('UPDATE StoreManager.products SET name = ? WHERE id = ?;', [product.name, id]);
+  // console.log('update:', productToUpdate);
+  return productToUpdate;
+};
+
+const deleteProduct = async (id) => {
+  const productToDelete = await connection
+    .execute('DELETE FROM StoreManager.products WHERE id = ? ', [id]);
+  return productToDelete;
 };
   
 module.exports = {
@@ -31,4 +38,5 @@ module.exports = {
   getProductsByID,
   getInsertProduct,
   updateProduct,
+  deleteProduct,
 };

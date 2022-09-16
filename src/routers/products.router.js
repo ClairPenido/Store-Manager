@@ -4,12 +4,14 @@ const productValidation = require('../middlewares/validations');
 
 const router = express.Router();
 
-router.put('/:id', productController.getProductsByID);
+router.get('/:id', productController.getProductsByID); // retornar produtos pelo id
 
-router.get('/:id', productController.getProductsByID);
+router.put('/:id', productValidation.validationsCheck, productController.updateProduct); // retorna produto atualizado
 
-router.post('/', productValidation.validationsCheck, productController.insertNewProject);
+router.post('/', productValidation.validationsCheck, productController.insertNewProject); // retornar produto novo
 
-router.get('/', productController.getAllProducts); 
+router.delete('/:id', productValidation.validationsCheck, productController.deleteProduct);
 
-module.exports = router;
+router.get('/', productController.getAllProducts); // retornar todos os produtos cadastrados
+
+module.exports = router; 
