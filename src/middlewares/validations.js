@@ -4,7 +4,7 @@ const validationsCheck = async (req, res, next) => {
   const { name } = req.body;
   const validation = schemas.nameSchema.validate({ name });
   const validationError = validation.error;
-  console.log('mensagem erro', validation);
+  // console.log('mensagem erro', validation);
   if (!validationError) {
     return next();
   }
