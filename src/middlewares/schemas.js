@@ -8,6 +8,19 @@ const nameSchema = Joi.object({
   }),
 });
 
+const saleSchema = Joi.array().items({
+  productId: Joi.number().required().messages({
+    'number.empty': '"productId" is required',
+    'any.required': '"productId" is required',
+  }),
+  quantity: Joi.number().min(1).required().messages({
+    'number.min': '"quantity" must be greater than or equal to 1',
+    'number.empty': '"quantity" is required',
+    'any.required': '"quantity" is required',
+  }),
+});
+
 module.exports = {
   nameSchema,
+  saleSchema,
 };
