@@ -10,7 +10,7 @@ router.put('/:id', productValidation.validationsCheck, productController.updateP
 
 router.post('/', productValidation.validationsCheck, productController.insertNewProject); // retornar produto novo
 
-router.delete('/:id', productValidation.validationsCheck, productController.deleteProduct);
+router.delete('/:id', productController.deleteProduct); // deletar um produto pelo ID
 
 router.get('/', productController.getAllProducts); // retornar todos os produtos cadastrados
 

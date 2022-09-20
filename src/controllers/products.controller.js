@@ -37,7 +37,7 @@ const deleteProduct = async (req, res) => {
     return res.status(404).json({ message: 'Product not found' });
   }
   await productService.productToDelete(id);
-  return res.status(204);
+  return res.sendStatus(204); // isso é tipo para ele falar que faz e pronto
   };
 
 module.exports = {
