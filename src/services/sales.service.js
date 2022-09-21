@@ -22,8 +22,17 @@ const returnSaleProduct = async (inputs) => {
   };
   return newSales;
 };
+
+const returnAllProducts = async () => {
+  const seila = saleModel.getAllSales();
+  return seila;
+};
+
+const returnSaleByID = async (id) => saleModel.getSaleById(id);
  
 module.exports = {
   returnSaleDate,
   returnSaleProduct,
+  returnAllProducts,
+  returnSaleByID,
 };
