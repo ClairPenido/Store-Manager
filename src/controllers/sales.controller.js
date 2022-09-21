@@ -15,8 +15,8 @@ const getSaleProduct = async (req, res) => {
   return res.status(201).json(getInput);
 };
 
-const getAllSales = async (req, res) => {
-  const getSales = await saleService.returnAllProducts();
+const getAllSales = async (_req, res) => {
+  const getSales = await saleService.returnAllSales();
   return res.status(200).json(getSales);
 };
 

@@ -14,7 +14,7 @@ describe('Teste da camada Model', () => {
 
     sinon.stub(connect, 'execute').resolves(allProductsMock);
     const result = await productModel.getAllProducts();
-    expect(result).to.equal(allProductsMock);
+    expect(result).to.deep.equal(allProductsMock);
 
   });
 
@@ -22,7 +22,7 @@ describe('Teste da camada Model', () => {
 
     sinon.stub(connect, 'execute').resolves( [[productByIdMock]] );
     const result = await productModel.getProductsByID(3);
-    expect(result).to.equal(productByIdMock);
+    expect(result).to.deep.equal(productByIdMock);
 
   });
 
