@@ -23,6 +23,5 @@ describe('Teste da Camada Service', () => {
     sinon.stub(saleModel, 'getSaleById').resolves(saleIdMock);
     const result = await saleService.returnSaleByID(1);
     expect(result).to.deep.equal(saleIdMock);
-
   });
 });
